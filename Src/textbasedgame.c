@@ -3,18 +3,29 @@
 
 
 
+struct rooms{
+  
+  int wall[3];	
+	
+};
+
+void roomcheck(int *r, int *x, int *y);
+
 int main(void){
 
   char m;
   char q = 'n';
   
   int d = 0;
+  int r;
   int x = 0;
   int y = 0;
   
-  printf("Controls:\n\nW to move forward.\nA to turn left.\nS to backstep.\nD to turn right.\n\n");
+  printf("Controls:\n\nW to move forward.\nA to turn left.\nD to turn right.\nS to search.\n\n");
   
   do{
+	
+	roomcheck(&r, &x, &y);
 	
 	m = mygetch();
 	
@@ -93,4 +104,8 @@ int main(void){
 	
 
 return 0;
+}
+
+void roomcheck{
+
 }
